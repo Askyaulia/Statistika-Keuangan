@@ -1,0 +1,19 @@
+nilaiakumulasi=function(num, k,i,t, m=TRUE){
+  #num : pilihan
+  #k=modal
+  #i=bunga(desimal)
+  #t=waktu
+  switch(num,
+         satu={
+           At=k*(1+i/m*t)
+           cat("Nilai akumulasi bunga tunggal")
+         },
+         dua={
+           At=k*(1+i/m)^(m*t)
+           cat("Nilai akumulasi bunga majemuk biasa/nominal")
+         },
+         dua={
+           At=k*exp(i*t)
+           cat("Nilai akumulasi bunga majemuk kontinu")
+         })
+  return(At)}
