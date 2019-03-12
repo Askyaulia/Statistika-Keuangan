@@ -1,0 +1,14 @@
+presentvalue=function(num, At,i, t, m=TRUE){
+  #num=pilihan, 1=bunga tunggal, 2=bunga majemuk
+  #At = nilai akumulasi
+  #k = modal
+  #t = waktu
+  #i = bunga
+  switch(num,
+         satu= { PV= At/(1+i*t)
+         cat("Nilai PV bunga tunggal:",PV)},
+         dua= { PV= At/(1+i/m)^(m*t)
+         cat("Nilai PV bunga nominal/biasa:",PV)},
+         tiga= {PV= At*exp(-i*t)
+         cat("Nilai Pv bunga majemuk kontinu:",PV)}
+         )}
