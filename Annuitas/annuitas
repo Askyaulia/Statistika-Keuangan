@@ -1,0 +1,20 @@
+annuitas=function(num,k,i,t,m=TRUE){
+  #n=banyak angsuran/pembayaran
+  n=m*t
+  j=i/m
+  v=(1+j)^-1
+  switch(num,
+         satu={
+           an=k*(1-v^n)/j
+           sn=k*((1+j)^n-1)/j
+           cat("present value untuk annuitas akhir:", an, "\n")
+           cat("nilai akumulasi untuk annuitas akhir", sn)
+         },
+         dua={
+           an=k*(1-v^n)/(j*v)
+           sn=k*((1+j)^n-1)/(j*v)
+           cat("present value untuk annuitas awal:", an, "\n")
+           cat("nilai akumulasi untuk annuitas awal", sn)
+         }
+  )
+}
